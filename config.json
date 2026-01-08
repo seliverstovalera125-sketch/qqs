@@ -1,0 +1,44 @@
+{
+    "bot": {
+        "presence": {
+            "status": "online",
+            "activities": [{
+                "name": "Kynxpro",
+                "type": "playerKynx"
+            }]
+        }
+    },
+    "Kynxpro": {
+        "servers": [{
+            "name": "Kynxpro",
+            "ip": "109.237.233.193",
+            "port": 25565,
+            "channelId": "1458768100005646409",
+            "messageId": "1458768332386996254",
+            "updateInterval": 15000,
+            "display": {
+                "type": "banner",
+                "banner": {
+                    "enabled": false,
+                    "url": "https://cdn.discordapp.com/attachments/1458161052914159747/1458769783314186373/9781-storm-realm.gif?ex=6960d8ba&is=695f873a&hm=8ccd4a28a302c977d41c3376ae57343d67338b36b8fe1685e3be7c0a9f8424bb&"
+                },
+                "chart": {
+                    "enabled": false,
+                    "color": "#3498db",
+                    "historyHours": 24
+                },
+                "showNextUpdate": false
+            }
+        }]
+    },
+    "embed": {
+        "title": "Kynxpro Server Status",
+        "colors": {
+            "online": "#2ecc71",
+            "offline": "#e74c3c"
+        },
+        "footer": {
+            "text": "Last updated"
+        }
+    }
+}
