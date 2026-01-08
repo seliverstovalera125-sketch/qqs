@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Stats Bot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white min-h-screen">
+    <div class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <header class="text-center mb-12">
+                <div class="inline-block p-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-6">
+                    <i class="fas fa-chart-bar text-4xl"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Discord Server Stats Bot</h1>
+                <p class="text-xl text-gray-300 mb-8">Полная статистика вашего Discord сервера в реальном времени</p>
+                <a href="/dashboard" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+                    <i class="fas fa-tachometer-alt mr-2"></i> Открыть Dashboard
+                </a>
+            </header>
+
+            <!-- Features -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-blue-400 text-2xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Статистика участников</h3>
+                    <p class="text-gray-400">Подробная информация об участниках, их статусах и активности</p>
+                </div>
+
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-green-400 text-2xl mb-4">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Анализ каналов</h3>
+                    <p class="text-gray-400">Статистика по текстовым и голосовым каналам, категориям</p>
+                </div>
+
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-purple-400 text-2xl mb-4">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Роли и разрешения</h3>
+                    <p class="text-gray-400">Анализ ролей, их иерархии и распределения прав</p>
+                </div>
+
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-yellow-400 text-2xl mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Discord команды</h3>
+                    <p class="text-gray-400">Полный набор команд для получения статистики прямо в Discord</p>
+                </div>
+
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-pink-400 text-2xl mb-4">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Веб-панель</h3>
+                    <p class="text-gray-400">Красивый веб-интерфейс для мониторинга статистики</p>
+                </div>
+
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                    <div class="text-red-400 text-2xl mb-4">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Реальное время</h3>
+                    <p class="text-gray-400">Данные обновляются в реальном времени каждые 5 минут</p>
+                </div>
+            </div>
+
+            <!-- Commands -->
+            <div class="bg-gray-800/30 rounded-2xl p-8 mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-center">🛠️ Доступные команды</h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-gray-800/50 rounded-lg p-4">
+                        <code class="text-blue-400 font-mono">/stats</code>
+                        <p class="text-gray-400 text-sm mt-1">Общая статистика сервера</p>
+                    </div>
+                    <div class="bg-gray-800/50 rounded-lg p-4">
+                        <code class="text-green-400 font-mono">/memberstats</code>
+                        <p class="text-gray-400 text-sm mt-1">Статистика участников</p>
+                    </div>
+                    <div class="bg-gray-800/50 rounded-lg p-4">
+                        <code class="text-purple-400 font-mono">/channelstats</code>
+                        <p class="text-gray-400 text-sm mt-1">Статистика каналов</p>
+                    </div>
+                    <div class="bg-gray-800/50 rounded-lg p-4">
+                        <code class="text-yellow-400 font-mono">/rolelist</code>
+                        <p class="text-gray-400 text-sm mt-1">Список ролей</p>
+                    </div>
+                    <div class="bg-gray-800/50 rounded-lg p-4">
+                        <code class="text-pink-400 font-mono">/botinfo</code>
+                        <p class="text-gray-400 text-sm mt-1">Информация о боте</p>
+                    </div>
+                    <div class="bg-gray-800/50 rounded-lg p-4">
+                        <code class="text-red-400 font-mono">/dashboard</code>
+                        <p class="text-gray-400 text-sm mt-1">Ссылка на веб-панель</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API Section -->
+            <div class="text-center">
+                <h2 class="text-2xl font-bold mb-4">🔧 API Endpoints</h2>
+                <div class="bg-gray-900 rounded-xl p-6 max-w-2xl mx-auto">
+                    <code class="text-green-400 font-mono text-lg">GET /api/stats</code>
+                    <p class="text-gray-400 mt-2">Получить все данные в JSON формате</p>
+                    <div class="mt-6">
+                        <a href="/api/stats" class="inline-block bg-gray-700 hover:bg-gray-600 text-white py-2 px-6 rounded-lg transition duration-300">
+                            <i class="fas fa-code mr-2"></i> Попробовать API
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">
+                <i class="fas fa-heart text-red-500 mr-1"></i>
+                Server Stats Bot • Статистика в реальном времени
+            </p>
+            <p class="text-gray-500 text-sm mt-2">Данные обновляются каждые 5 минут</p>
+        </div>
+    </footer>
+</body>
+</html>
